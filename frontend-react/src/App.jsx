@@ -1,32 +1,33 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import './App.css'
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Button from "react-bootstrap/Button"
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Navbar bg="dark" variant="dark">
+        <Container>
+          <Navbar.Brand href="/">Neetcode Clone</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="/courses">Courses</Nav.Link>
+            <Nav.Link href="/practice">Practice</Nav.Link>
+            <Nav.Link href="/roadmap">RoadMap</Nav.Link>
+            <Nav.Link href="/pro">Pro</Nav.Link>
+          </Nav>
+            <div>
+              <Button variant="outline-primary">
+                 dark
+              </Button>
+              <Button variant="primary">
+                 Sign In
+              </Button>
+            </div>
+        </Container>
+      </Navbar>
     </div>
   )
 }
